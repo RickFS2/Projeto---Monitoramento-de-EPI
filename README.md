@@ -1,7 +1,7 @@
 # Projeto Integrador
 Sistema Inteligente de Monitoramento e Gestão de EPI Grupo: Ricardo Fogel; João Gabriel; Rafael Saldanha; João Accácio.
 
-Descrição : # Sistema Inteligente de Monitoramento e Gestão de EPI
+Descrição : Sistema Inteligente de Monitoramento e Gestão de EPI
 
 Este projeto propõe o desenvolvimento de uma plataforma voltada para **segurança do trabalho em ambientes industriais**, com foco no controle e monitoramento do uso de Equipamentos de Proteção Individual (EPI). A ideia surgiu a partir de um problema comum em muitas empresas: a dificuldade de acompanhar, de forma eficiente e contínua, se os trabalhadores estão utilizando corretamente os equipamentos de proteção exigidos em determinadas áreas. 
 
