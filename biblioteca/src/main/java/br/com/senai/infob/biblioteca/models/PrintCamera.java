@@ -1,6 +1,7 @@
 package br.com.senai.infob.biblioteca.models;
 
-import java.security.Timestamp;
+
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,8 +27,8 @@ public class PrintCamera {
     @Column(name="Imagem_path")
     private String ImagemPath;
 
-    @Column(name="Data_hora")
-    private Timestamp dataHora;
+    @Column(name="Data_hora", columnDefinition = "TIMESTAMP")
+    private LocalDateTime dataHora; //mudamos de Timestamp para LocalDateTime pois dava erro 415 no swagger, e o LocalDateTime é mais recomendado para lidar com data e hora no Java
 
         @ManyToOne
     @JoinColumn(name = "camera_id")
@@ -35,7 +36,7 @@ public class PrintCamera {
     public PrintCamera() {
     }
 
-    public PrintCamera(int printCameraId, boolean validação, String imagemPath, Timestamp dataHora) {
+    public PrintCamera(int printCameraId, boolean validação, String imagemPath, LocalDateTime dataHora) {
         PrintCameraId = printCameraId;
         Validação = validação;
         ImagemPath = imagemPath;
@@ -66,11 +67,11 @@ public class PrintCamera {
         ImagemPath = imagemPath;
     }
 
-    public Timestamp getDataHora() {
+    public LocalDateTime getDataHora() {
         return dataHora;
     }
 
-    public void setDataHora(Timestamp dataHora) {
+    public void setDataHora(LocalDateTime dataHora) {
         this.dataHora = dataHora;
     } 
 }

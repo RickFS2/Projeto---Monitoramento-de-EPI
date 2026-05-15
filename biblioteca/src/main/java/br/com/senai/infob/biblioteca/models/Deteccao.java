@@ -1,6 +1,7 @@
 package br.com.senai.infob.biblioteca.models;
 
-import java.security.Timestamp;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -25,8 +26,8 @@ public class Deteccao{
     @Column(name="usando_epi")
     private boolean UsandoEpi;
 
-    @Column(name="data_hora")
-    private Timestamp DataHora;
+    @Column(name="Data_hora", columnDefinition = "TIMESTAMP")
+    private LocalDateTime DataHora; //mudamos de Timestamp para LocalDateTime pois dava erro 415 o swagger não reconhecia o formato do Timestamp, e o LocalDateTime é mais recomendado para lidar com data e hora no Java
 
     @ManyToOne
 @JoinColumn(name = "funcionario_id")
@@ -49,7 +50,7 @@ private List<Alerta> alertas;
     public Deteccao() {
     }
 
-    public Deteccao(int deteccaoId, boolean usandoEpi, Timestamp dataHora) {
+    public Deteccao(int deteccaoId, boolean usandoEpi, LocalDateTime dataHora) {
         DeteccaoId = deteccaoId;
         UsandoEpi = usandoEpi;
         DataHora = dataHora;
@@ -71,11 +72,11 @@ private List<Alerta> alertas;
         UsandoEpi = usandoEpi;
     }
 
-    public Timestamp getDataHora() {
+    public LocalDateTime getDataHora() {
         return DataHora;
     }
 
-    public void setDataHora(Timestamp dataHora) {
+    public void setDataHora(LocalDateTime dataHora) {
         DataHora = dataHora;
     }
 
