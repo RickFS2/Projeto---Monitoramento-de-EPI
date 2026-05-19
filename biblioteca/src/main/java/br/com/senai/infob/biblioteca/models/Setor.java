@@ -23,7 +23,7 @@ public class Setor {
     @Column(name="nome_setor")
     private String nomeSetor;
 
-    @OneToMany(mappedBy = "setor")
+ /* *  @OneToMany(mappedBy = "setor")
 private List<Funcionario> funcionarios;
 
 @OneToMany(mappedBy = "setor")
@@ -38,13 +38,15 @@ private List<Maquina> maquinas;
 @ManyToMany(mappedBy = "setores")
 private List<Usuario> usuarios;
 
+*/
+
     public Setor() {
     }
+
     public Setor(int setorId, String nomeSetor) {
         this.setorId = setorId;
         this.nomeSetor = nomeSetor;
     }
-
 
     public int getSetorId() {
         return setorId;
@@ -61,4 +63,7 @@ private List<Usuario> usuarios;
     public void setNomeSetor(String nomeSetor) {
         this.nomeSetor = nomeSetor;
     }
+    
+
+    
 }

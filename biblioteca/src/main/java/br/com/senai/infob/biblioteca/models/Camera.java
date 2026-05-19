@@ -28,17 +28,17 @@ public class Camera {
     @JoinColumn(name = "setor_id")
     private Setor setor;
 
-        @OneToMany(mappedBy = "camera")
+      /*   @OneToMany(mappedBy = "camera")
     private List<PrintCamera> prints;
-    
+    */
+
     public Camera() {
     }
 
-    public Camera(int cameraId, String localizacao, Setor setor, List<PrintCamera> prints) {
+    public Camera(int cameraId, String localizacao, Setor setor) {
         this.cameraId = cameraId;
         this.localizacao = localizacao;
         this.setor = setor;
-        this.prints = prints;
     }
 
     public int getCameraId() {
@@ -65,13 +65,6 @@ public class Camera {
         this.setor = setor;
     }
 
-    public List<PrintCamera> getPrints() {
-        return prints;
-    }
-
-    public void setPrints(List<PrintCamera> prints) {
-        this.prints = prints;
-    }
 
     
 }

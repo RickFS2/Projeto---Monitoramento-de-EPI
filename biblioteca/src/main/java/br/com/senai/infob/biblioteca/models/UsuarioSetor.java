@@ -16,11 +16,21 @@ public class UsuarioSetor {
     @Column(name="usuario_setor")
     private int usuarioSetorId;
 
+    @Id
+    @Column(name="usuario_id")
+    private int usuarioId;
+
+    @Id
+    @Column(name="setor_id")
+    private int setorId;
+
     public UsuarioSetor() {
     }
 
-    public UsuarioSetor(int usuarioSetorId) {
+    public UsuarioSetor(int usuarioSetorId, int usuarioId, int setorId) {
         this.usuarioSetorId = usuarioSetorId;
+        this.usuarioId = usuarioId;
+        this.setorId = setorId;
     }
 
     public int getUsuarioSetorId() {
@@ -30,4 +40,22 @@ public class UsuarioSetor {
     public void setUsuarioSetorId(int usuarioSetorId) {
         this.usuarioSetorId = usuarioSetorId;
     }
+
+    public int getUsuarioId() {
+        return usuarioId;
+    }
+
+    public void setUsuarioId(int usuarioId) {
+        this.usuarioId = usuarioId;
+    }
+
+    public int getSetorId() {
+        return setorId;
+    }
+
+    public void setSetorId(int setorId) {
+        this.setorId = setorId;
+    }
+
+    
 }

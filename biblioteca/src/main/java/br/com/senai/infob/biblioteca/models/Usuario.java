@@ -36,47 +36,52 @@ public class Usuario {
     )
     private List<Setor> setores;
 
-        @OneToMany(mappedBy = "usuario")
+    /* *   @OneToMany(mappedBy = "usuario")
     private List<Alerta> alertas;
+*/
+
     public Usuario() {
     }
-    public Usuario(int usuarioId, String nome, String senha, List<Setor> setores, List<Alerta> alertas) {
+
+    public Usuario(int usuarioId, String nome, String senha, List<Setor> setores) {
         this.usuarioId = usuarioId;
         this.nome = nome;
         this.senha = senha;
         this.setores = setores;
-        this.alertas = alertas;
     }
+
     public int getUsuarioId() {
         return usuarioId;
     }
+
     public void setUsuarioId(int usuarioId) {
         this.usuarioId = usuarioId;
     }
+
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public String getSenha() {
         return senha;
     }
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
     public List<Setor> getSetores() {
         return setores;
     }
+
     public void setSetores(List<Setor> setores) {
         this.setores = setores;
     }
-    public List<Alerta> getAlertas() {
-        return alertas;
-    }
-    public void setAlertas(List<Alerta> alertas) {
-        this.alertas = alertas;
-    }
-
+    
+    
     
 }

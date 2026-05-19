@@ -1,6 +1,9 @@
 package br.com.senai.infob.biblioteca.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -45,12 +48,16 @@ private Epi epi;
 @JoinColumn(name = "maquina_id")
 private Maquina maquina;
 
-@OneToMany(mappedBy = "deteccao")
-private List<Alerta> alertas;
+
+// @OneToMany(mappedBy = "deteccao")
+// @JsonIgnore
+// private List<Alerta> alertas;
     public Deteccao() {
     }
+
+
     public Deteccao(int deteccaoId, boolean usandoEpi, LocalDateTime dataHora, Funcionario funcionario, Camera camera,
-            Epi epi, Maquina maquina, List<Alerta> alertas) {
+            Epi epi, Maquina maquina) {
         DeteccaoId = deteccaoId;
         UsandoEpi = usandoEpi;
         DataHora = dataHora;
@@ -58,56 +65,78 @@ private List<Alerta> alertas;
         this.camera = camera;
         this.epi = epi;
         this.maquina = maquina;
-        this.alertas = alertas;
     }
+
+
     public int getDeteccaoId() {
         return DeteccaoId;
     }
+
+
     public void setDeteccaoId(int deteccaoId) {
         DeteccaoId = deteccaoId;
     }
+
+
     public boolean isUsandoEpi() {
         return UsandoEpi;
     }
+
+
     public void setUsandoEpi(boolean usandoEpi) {
         UsandoEpi = usandoEpi;
     }
+
+
     public LocalDateTime getDataHora() {
         return DataHora;
     }
+
+
     public void setDataHora(LocalDateTime dataHora) {
         DataHora = dataHora;
     }
+
+
     public Funcionario getFuncionario() {
         return funcionario;
     }
+
+
     public void setFuncionario(Funcionario funcionario) {
         this.funcionario = funcionario;
     }
+
+
     public Camera getCamera() {
         return camera;
     }
+
+
     public void setCamera(Camera camera) {
         this.camera = camera;
     }
+
+
     public Epi getEpi() {
         return epi;
     }
+
+
     public void setEpi(Epi epi) {
         this.epi = epi;
     }
+
+
     public Maquina getMaquina() {
         return maquina;
     }
+
+
     public void setMaquina(Maquina maquina) {
         this.maquina = maquina;
     }
-    public List<Alerta> getAlertas() {
-        return alertas;
-    }
-    public void setAlertas(List<Alerta> alertas) {
-        this.alertas = alertas;
-    }
+ 
 
     
 }

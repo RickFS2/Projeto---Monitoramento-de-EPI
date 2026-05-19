@@ -33,22 +33,21 @@ public class Epi {
     @Column(name="Quantidade_disponivel")
     private int QuantidadeDisponnivel;
 
-        @ManyToMany(mappedBy = "epis")
+       /* / @ManyToMany(mappedBy = "epis")
     private List<Funcionario> funcionarios;
+    /* */
 
         @ManyToOne
     @JoinColumn(name = "setor_id")
     private Setor setor;
     public Epi() {
     }
-    public Epi(int epiId, String nome, String categoria, int quantidadeTotal, int quantidadeDisponnivel,
-            List<Funcionario> funcionarios, Setor setor) {
+    public Epi(int epiId, String nome, String categoria, int quantidadeTotal, int quantidadeDisponnivel, Setor setor) {
         this.epiId = epiId;
         this.nome = nome;
         this.categoria = categoria;
         QuantidadeTotal = quantidadeTotal;
         QuantidadeDisponnivel = quantidadeDisponnivel;
-        this.funcionarios = funcionarios;
         this.setor = setor;
     }
     public int getEpiId() {
@@ -81,19 +80,13 @@ public class Epi {
     public void setQuantidadeDisponnivel(int quantidadeDisponnivel) {
         QuantidadeDisponnivel = quantidadeDisponnivel;
     }
-    public List<Funcionario> getFuncionarios() {
-        return funcionarios;
-    }
-    public void setFuncionarios(List<Funcionario> funcionarios) {
-        this.funcionarios = funcionarios;
-    }
     public Setor getSetor() {
         return setor;
     }
     public void setSetor(Setor setor) {
         this.setor = setor;
     }
-
     
+
     
 }
