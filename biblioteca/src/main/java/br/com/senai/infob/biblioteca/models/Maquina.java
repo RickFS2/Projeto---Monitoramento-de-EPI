@@ -31,10 +31,11 @@ public class Maquina {
     public Maquina() {
     }
 
-    public Maquina(int maquinaId, String nome, String status) {
+    public Maquina(int maquinaId, String nome, String status, Setor setor) {
         MaquinaId = maquinaId;
         Nome = nome;
         Status = status;
+        this.setor = setor;
     }
 
     public int getMaquinaId() {
@@ -60,6 +61,16 @@ public class Maquina {
     public void setStatus(String status) {
         Status = status;
     }
+
+    public Setor getSetor() {
+        return setor;
+    }
+
+    public void setSetor(Setor setor) {
+        this.setor = setor;
+    }
+
+    
 
     
 }

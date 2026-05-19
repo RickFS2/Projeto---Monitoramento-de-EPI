@@ -30,25 +30,36 @@ public class Alerta {
     private Usuario usuario;
     public Alerta() {
     }
-
-    public Alerta(int alertaId, int statusId) {
-        this.alertaId = alertaId;
+    public Alerta(int alertaId, int statusId, Deteccao deteccao, Usuario usuario) {   // Adicionamos o parâmetro Usuario e Deteccao, pois estavam faltando e são necessários para criar um alerta completo
+        this.alertaId = alertaId;  
         this.statusId = statusId;
+        this.deteccao = deteccao;
+        this.usuario = usuario;
     }
-
     public int getAlertaId() {
         return alertaId;
     }
-
     public void setAlertaId(int alertaId) {
         this.alertaId = alertaId;
     }
-
     public int getStatusId() {
         return statusId;
     }
-
     public void setStatusId(int statusId) {
         this.statusId = statusId;
     }
+    public Deteccao getDeteccao() {
+        return deteccao;
+    }
+    public void setDeteccao(Deteccao deteccao) {
+        this.deteccao = deteccao;
+    }
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+
 }

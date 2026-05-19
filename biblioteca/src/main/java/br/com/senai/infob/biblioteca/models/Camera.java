@@ -34,9 +34,11 @@ public class Camera {
     public Camera() {
     }
 
-    public Camera(int cameraId, String localizacao) {
+    public Camera(int cameraId, String localizacao, Setor setor, List<PrintCamera> prints) {
         this.cameraId = cameraId;
         this.localizacao = localizacao;
+        this.setor = setor;
+        this.prints = prints;
     }
 
     public int getCameraId() {
@@ -54,7 +56,22 @@ public class Camera {
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
     }
-    
+
+    public Setor getSetor() {
+        return setor;
+    }
+
+    public void setSetor(Setor setor) {
+        this.setor = setor;
+    }
+
+    public List<PrintCamera> getPrints() {
+        return prints;
+    }
+
+    public void setPrints(List<PrintCamera> prints) {
+        this.prints = prints;
+    }
 
     
 }

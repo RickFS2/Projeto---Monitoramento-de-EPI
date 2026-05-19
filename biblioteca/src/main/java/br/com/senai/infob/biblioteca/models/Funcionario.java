@@ -38,27 +38,36 @@ private List<Epi> epis;
 private Setor setor;
     public Funcionario() {
     }
-
-    public Funcionario(int funcionarioId, String nomeFuncionario) {
+    public Funcionario(int funcionarioId, String nomeFuncionario, List<Epi> epis, Setor setor) {
         FuncionarioId = funcionarioId;
         NomeFuncionario = nomeFuncionario;
+        this.epis = epis;
+        this.setor = setor;
     }
-
-
-
     public int getFuncionarioId() {
         return FuncionarioId;
     }
-
-    public void setFuncionarioId(int FuncionarioId) {
-        this.FuncionarioId = FuncionarioId;
+    public void setFuncionarioId(int funcionarioId) {
+        FuncionarioId = funcionarioId;
     }
-
     public String getNomeFuncionario() {
         return NomeFuncionario;
     }
+    public void setNomeFuncionario(String nomeFuncionario) {
+        NomeFuncionario = nomeFuncionario;
+    }
+    public List<Epi> getEpis() {
+        return epis;
+    }
+    public void setEpis(List<Epi> epis) {
+        this.epis = epis;
+    }
+    public Setor getSetor() {
+        return setor;
+    }
+    public void setSetor(Setor setor) {
+        this.setor = setor;
+    }
 
-    public void setNomeFuncionario(String NomeFuncionario) {
-        this.NomeFuncionario = NomeFuncionario;
-    }    
+    
 }

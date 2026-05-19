@@ -41,56 +41,59 @@ public class Epi {
     private Setor setor;
     public Epi() {
     }
-
-    
-    public Epi(int epiId, String nome, String categoria, int quantidadeTotal, int quantidadeDisponnivel) {
+    public Epi(int epiId, String nome, String categoria, int quantidadeTotal, int quantidadeDisponnivel,
+            List<Funcionario> funcionarios, Setor setor) {
         this.epiId = epiId;
         this.nome = nome;
         this.categoria = categoria;
         QuantidadeTotal = quantidadeTotal;
         QuantidadeDisponnivel = quantidadeDisponnivel;
+        this.funcionarios = funcionarios;
+        this.setor = setor;
     }
-
-
     public int getEpiId() {
         return epiId;
     }
-
     public void setEpiId(int epiId) {
         this.epiId = epiId;
     }
-
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     public String getCategoria() {
         return categoria;
     }
-
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-
     public int getQuantidadeTotal() {
         return QuantidadeTotal;
     }
-
     public void setQuantidadeTotal(int quantidadeTotal) {
         QuantidadeTotal = quantidadeTotal;
     }
-
     public int getQuantidadeDisponnivel() {
         return QuantidadeDisponnivel;
     }
-
     public void setQuantidadeDisponnivel(int quantidadeDisponnivel) {
         QuantidadeDisponnivel = quantidadeDisponnivel;
     }
+    public List<Funcionario> getFuncionarios() {
+        return funcionarios;
+    }
+    public void setFuncionarios(List<Funcionario> funcionarios) {
+        this.funcionarios = funcionarios;
+    }
+    public Setor getSetor() {
+        return setor;
+    }
+    public void setSetor(Setor setor) {
+        this.setor = setor;
+    }
 
+    
     
 }

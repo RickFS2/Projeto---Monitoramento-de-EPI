@@ -35,44 +35,44 @@ public class PrintCamera {
     private Camera camera;
     public PrintCamera() {
     }
-
-    public PrintCamera(int printCameraId, boolean validação, String imagemPath, LocalDateTime dataHora) {
+    public PrintCamera(int printCameraId, boolean validação, String imagemPath, LocalDateTime dataHora, Camera camera) {
         PrintCameraId = printCameraId;
         Validação = validação;
         ImagemPath = imagemPath;
         this.dataHora = dataHora;
+        this.camera = camera;
     }
-
     public int getPrintCameraId() {
         return PrintCameraId;
     }
-
     public void setPrintCameraId(int printCameraId) {
         PrintCameraId = printCameraId;
     }
-
     public boolean isValidação() {
         return Validação;
     }
-
     public void setValidação(boolean validação) {
         Validação = validação;
     }
-
     public String getImagemPath() {
         return ImagemPath;
     }
-
     public void setImagemPath(String imagemPath) {
         ImagemPath = imagemPath;
     }
-
     public LocalDateTime getDataHora() {
         return dataHora;
     }
-
     public void setDataHora(LocalDateTime dataHora) {
         this.dataHora = dataHora;
-    } 
+    }
+    public Camera getCamera() {
+        return camera;
+    }
+    public void setCamera(Camera camera) {
+        this.camera = camera;
+    }
+
+    
 }
 
